@@ -1,7 +1,14 @@
 # Welcome to Ammar Farhan's GitHub Profile 👋
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=FROST8ytes&show_icons=true&theme=onedark&count_private=true">
-  <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FROST8ytes&theme=onedark&count_private=true&layout=compact">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=FROST8ytes&show_icons=true&theme=onedark&count_private=true">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FROST8ytes&theme=onedark&count_private=true&layout=compact">
+  </a>
 </p>
 
 ## Known Languages (Most Familiar to Least Familiar)
