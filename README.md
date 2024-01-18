@@ -7,11 +7,11 @@
 </p>
 
 <!-- GitHub Stats -->
-<p align="center">
+<!-- <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img src="https://github-readme-stats.vercel.app/api?username=FROST8ytes&show_icons=true&theme=onedark&count_private=true">
   </a>
-</p>
+</p> -->
 
 <!-- Top languages -->
 <p align="center">
@@ -56,7 +56,7 @@ Most familiar refers to being able to use while barely refering to the documenta
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
 </a>
-<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+<!-- <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>
 </a>
 <a href="https://www.swift.org/" target="_blank" rel="noreferrer">
@@ -64,7 +64,7 @@ Most familiar refers to being able to use while barely refering to the documenta
 </a>
 <a href="https://www.lua.org/" target="_blank" rel="noreferrer">
   <img src="https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white" alt="lua" />
-</a>
+</a> -->
 
 ## Known Technologies (Most Familiar to Least Familiar)
 Most familiar refers to being able to use while barely referring to the documentation. Least familiar refers to being able to use while relying heavily on the documentation.
