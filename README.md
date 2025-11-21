@@ -1,5 +1,6 @@
 <h1 align="center">Hi 👋, I'm Ammar Farhan</h1>
 <h3 align="center">A curious undergraduate computer science student</h3>
+<p align="center">Graduating in December 2025 🎓 Looking for a <strong>software engineering</strong> job 🤲🏽</p>
 
 <!-- Profile views -->
 <p align="center">
@@ -95,7 +96,7 @@ Most familiar refers to being able to use while barely referring to the document
 </a>
 
 ## More About Me
-- 🔭 I’m currently learning iOS development with an example project [Todo Bubs](https://github.com/FROST8ytes/todo-bubs).
+- 🔭 I’m currently working on a travel log web app using Nuxt framework called [Kembara](https://github.com/FROST8ytes/kembara).
 - 👯 I’m looking to collaborate on anything within my knowledge scope listed [here](#known-languages-most-familiar-to-least-familiar) and [here](#known-technologies-most-familiar-to-least-familiar).
 - 🤔 I’m looking for help with **embedded systems programming** in **Rust**.
 
