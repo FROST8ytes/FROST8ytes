@@ -4,13 +4,14 @@ Usage: python gen_terminal.py [output-name]   (default: terminal)
 The colour scheme comes from ~/.config/gifos/gifos_settings.toml; the
 background colour is keyed out afterwards so the GIF is transparent.""" 
 import os
+import subprocess
 import sys
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import gifos
-from PIL import Image, ImageSequence
+from PIL import Image
 
 USER = "FROST8ytes"
 FG_Y, FG_G, FG_B, FG_A, FG_R, FG_P, FG_O, GRAY, RST = (
@@ -42,31 +43,23 @@ def t_logo_rows(h, row_px):
     return math.ceil(h / row_px)
 
 
-def make_transparent(src, dst):
-    """Key out the terminal background so the GIF sits on any page colour."""
-    im = Image.open(src)
-    frames, durs = [], []
-    bg = None
-    for f in ImageSequence.Iterator(im):
-        rgb = f.convert("RGB")
-        if bg is None:
-            bg = rgb.getpixel((0, 0))
-        p = rgb.quantize(colors=255, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-        pal = p.getpalette()[: 255 * 3]
-        px = p.load()
-        rp = rgb.load()
-        w, h = rgb.size
-        for y in range(h):
-            for x in range(w):
-                if rp[x, y] == bg:
-                    px[x, y] = 255
-        p.putpalette(pal + [0, 0, 0])
-        frames.append(p)
-        durs.append(f.info.get("duration", 66))
-    frames[0].save(
-        dst, save_all=True, append_images=frames[1:], duration=durs, loop=0,
-        transparency=255, disposal=2, optimize=False,
+def make_transparent(bg, dst, fps=15, frames="frames/frame_%d.png"):
+    """Rebuild the GIF from gifos' PNG frames with the terminal bg keyed out.
+
+    Uses ffmpeg (palette with a reserved transparent slot, full frames, no
+    inter-frame tricks) so every browser decodes all frames.
+    """
+    bg = bg.lstrip("#") if isinstance(bg, str) else "%02x%02x%02x" % tuple(bg[:3])
+    vf = (
+        f"[0:v]colorkey=0x{bg}:0.01:0,split[a][b];"
+        "[a]palettegen=reserve_transparent=1:stats_mode=full[p];"
+        "[b][p]paletteuse=dither=none:alpha_threshold=128"
     )
+    cmd = [
+        "ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-r", str(fps),
+        "-i", frames, "-filter_complex", vf, "-gifflags", "-offsetting-transdiff", dst,
+    ]
+    subprocess.run(cmd, check=True)
 
 
 def get_stats():
@@ -198,11 +191,8 @@ def main():
 
     t.gen_prompt(last + 2)
     t.clone_frame(45)
-    t.gen_gif()
     out = (sys.argv[1] if len(sys.argv) > 1 else "terminal") + ".gif"
-    make_transparent("terminal.gif", out)
-    if out != "terminal.gif":
-        os.remove("terminal.gif")
+    make_transparent(BG, out)
 
 
 if __name__ == "__main__":
