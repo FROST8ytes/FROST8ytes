@@ -1,0 +1,52 @@
+name: Build README assets
+
+on:
+  schedule:
+    - cron: "17 16 * * *" # 00:17 MYT daily
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "config/**", ".github/workflows/build.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install github-readme-terminal
+          mkdir -p ~/.config/gifos && cp config/*.toml ~/.config/gifos/
+
+      - name: Generate terminal GIF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
+        run: |
+          mkdir -p dist && cd dist
+          python ../scripts/gen_terminal.py
+          rm -rf frames
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#fabd2f&color_dots=#3c3836,#504945,#79740e,#98971a,#b8bb26
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: update README assets"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

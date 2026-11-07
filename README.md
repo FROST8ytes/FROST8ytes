@@ -1,122 +1,79 @@
-<h1 align="center">Hi 👋, I'm Ammar Farhan</h1>
-<h3 align="center">A curious undergraduate computer science student</h3>
-<p align="center">Graduating in December 2025 🎓 Looking for a <strong>software engineering</strong> job 🤲🏽</p>
-
-<!-- Profile views -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=frost8ytes&label=Profile%20views&color=0e75b6&style=flat" alt="frost8ytes" />
+  <img src="./assets/wordmark.svg" alt="FROST8ytes" width="720" />
 </p>
 
-<!-- GitHub Stats -->
-<!-- <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=FROST8ytes&show_icons=true&theme=onedark&count_private=true">
-  </a>
-</p> -->
-
-<!-- Top languages -->
 <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FROST8ytes&theme=onedark&count_private=true&layout=compact">
-  </a>
+  <img src="https://img.shields.io/badge/%28Cyber%29_Security_Analyst-@_SRKK-fabd2f?style=flat-square&labelColor=3c3836" alt="Security Analyst @ SRKK" />
+  <img src="https://img.shields.io/badge/SOC-Blue_Team-83a598?style=flat-square&labelColor=3c3836" alt="SOC Blue Team" />
+  <img src="https://img.shields.io/badge/certs-8-b8bb26?style=flat-square&labelColor=3c3836" alt="8 certifications" />
+  <img src="https://komarev.com/ghpvc/?username=frost8ytes&label=views&color=d3869b&style=flat-square&labelColor=282828" alt="views" />
 </p>
 
-<!-- GitHub streak -->
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=frost8ytes&theme=onedark" alt="frost8ytes" />
+  <img src="https://raw.githubusercontent.com/FROST8ytes/FROST8ytes/output/terminal.gif" alt="ammar@frost terminal" width="720" />
 </p>
 
-<!-- GitHub trophy showcase -->
-<!-- <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=frost8ytes&theme=onedark" alt="frost8ytes" />
-  </a>
-</p> -->
+### `~/.edu`
 
-## Known Languages (Most Familiar to Least Familiar)
-Most familiar refers to being able to use while barely refering to the documentation. Least familiar refers to being able to use while relying heavily on the documentation.
+<img src="https://img.shields.io/badge/uni-Universiti_Teknologi_PETRONAS-d3869b?style=flat-square&labelColor=3c3836" alt="Universiti Teknologi PETRONAS" /><br/>
+<img src="https://img.shields.io/badge/degree-Bachelor_of_Computer_Science_%28Honours%29_in_Data_Analytics-d3869b?style=flat-square&labelColor=3c3836" alt="Bachelor of Computer Science (Honours) in Data Analytics" /><br/>
+<img src="https://img.shields.io/badge/minor-Financial_Management-d3869b?style=flat-square&labelColor=3c3836" alt="Minor in Financial Management" />
 
-<a href="https://www.python.org" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
-</a> 
-<a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/>
-</a>
-<a href="https://www.java.com" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
-</a>
-<a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>
-</a> 
-<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
-</a> 
-<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
-</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
-</a>
-<!-- <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>
-</a>
-<a href="https://www.swift.org/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="swift" width="40" height="40"/>
-</a>
-<a href="https://www.lua.org/" target="_blank" rel="noreferrer">
-  <img src="https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white" alt="lua" />
-</a> -->
+### `~/.certs`
 
-## Known Technologies (Most Familiar to Least Familiar)
-Most familiar refers to being able to use while barely referring to the documentation. Least familiar refers to being able to use while relying heavily on the documentation.
+<p>
+  <img src="https://img.shields.io/badge/SC--200-Security_Operations_Analyst_Associate-fabd2f?style=flat-square&labelColor=3c3836" alt="Microsoft Certified: Security Operations Analyst Associate (SC-200)" />
+  <img src="https://img.shields.io/badge/SC--401-Information_Security_Administrator_Associate-fabd2f?style=flat-square&labelColor=3c3836" alt="Microsoft Certified: Information Security Administrator Associate (SC-401)" />
+  <img src="https://img.shields.io/badge/SCTP-Network_Secure-fe8019?style=flat-square&labelColor=3c3836" alt="Sangfor Certified Technical Professional - Network Secure" />
+  <img src="https://img.shields.io/badge/SCTA-Network_Secure-fe8019?style=flat-square&labelColor=3c3836" alt="Sangfor Certified Technical Associate - Network Secure" />
+  <img src="https://img.shields.io/badge/SCTA-Endpoint_Secure-fe8019?style=flat-square&labelColor=3c3836" alt="Sangfor Certified Technical Associate - Endpoint Secure" />
+  <img src="https://img.shields.io/badge/SCTA-IAG-fe8019?style=flat-square&labelColor=3c3836" alt="Sangfor Certified Technical Associate - IAG" />
+  <img src="https://img.shields.io/badge/SCTA-XDR-fe8019?style=flat-square&labelColor=3c3836" alt="Sangfor Certified Technical Associate - XDR" />
+  <img src="https://img.shields.io/badge/SCCSM-MDR-fe8019?style=flat-square&labelColor=3c3836" alt="Sangfor Certified Customer Success Manager - MDR" />
+</p>
 
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
-</a> 
-<a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
-  <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/>
-</a>
-<a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/>
-</a>
-<a href="https://www.linux.org/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/>
-</a>
-<a href="https://nodejs.org" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/>
-</a>
-<a href="https://www.oracle.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/>
-</a>
-<a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/>
-</a> 
-<a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/>
-</a>
+### `~/.stack`
 
-## More About Me
-- 🔭 I’m currently working on a travel log web app using Nuxt framework called [Kembara](https://github.com/FROST8ytes/kembara).
-- 👯 I’m looking to collaborate on anything within my knowledge scope listed [here](#known-languages-most-familiar-to-least-familiar) and [here](#known-technologies-most-familiar-to-least-familiar).
-- 🤔 I’m looking for help with **embedded systems programming** in **Rust**.
+<p>
+  <img src="https://img.shields.io/badge/Defender_XDR-282828?style=flat-square" alt="Defender XDR" />
+  <img src="https://img.shields.io/badge/Sentinel-282828?style=flat-square" alt="Sentinel" />
+  <img src="https://img.shields.io/badge/KQL-282828?style=flat-square" alt="KQL" />
+  <img src="https://img.shields.io/badge/Python-282828?style=flat-square&logo=python&logoColor=fabd2f" alt="Python" />
+  <img src="https://img.shields.io/badge/Rust-282828?style=flat-square&logo=rust&logoColor=fe8019" alt="Rust" />
+  <img src="https://img.shields.io/badge/TypeScript-282828?style=flat-square&logo=typescript&logoColor=83a598" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Nuxt-282828?style=flat-square&logo=nuxt&logoColor=b8bb26" alt="Nuxt" />
+  <img src="https://img.shields.io/badge/PowerShell-282828?style=flat-square" alt="PowerShell" />
+  <img src="https://img.shields.io/badge/Docker-282828?style=flat-square&logo=docker&logoColor=83a598" alt="Docker" />
+  <img src="https://img.shields.io/badge/Git-282828?style=flat-square&logo=git&logoColor=fb4934" alt="Git" />
+</p>
 
-## Contact Me
-- Non-official matters
+### `~/.setup`
 
-![Discord: frost8ytes](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white "frost8ytes")
-- Official matters
+<p>
+  <img src="https://img.shields.io/badge/Windows-282828?style=flat-square" alt="Windows" />
+  <img src="https://img.shields.io/badge/macOS-282828?style=flat-square&logo=apple&logoColor=ebdbb2" alt="macOS" />
+  <img src="https://img.shields.io/badge/Linux-282828?style=flat-square&logo=linux&logoColor=fabd2f" alt="Linux" />
+  <img src="https://img.shields.io/badge/Android-282828?style=flat-square&logo=android&logoColor=b8bb26" alt="Android" />
+  <img src="https://img.shields.io/badge/iOS-282828?style=flat-square&logo=ios&logoColor=ebdbb2" alt="iOS" />
+  <img src="https://img.shields.io/badge/Zed-282828?style=flat-square&logo=zedindustries&logoColor=8ec07c" alt="Zed" />
+  <img src="https://img.shields.io/badge/Neovim-282828?style=flat-square&logo=neovim&logoColor=b8bb26" alt="Neovim" />
+</p>
 
-![Gmail: ammarfmr11@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white "ammarfmr11@gmail.com")
+### `~/.streak`
 
-## Check Out My Socials
-<p align="left">
-<a href="https://www.youtube.com/@FROST8ytes" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="frost8ytes" height="30" width="40" />
-</a>
-<a href="https://www.leetcode.com/frost8ytes" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="frost8ytes" height="30" width="40" />
-</a>
-<a href="https://discord.gg/zdfvYpK" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="zdfvYpK" height="30" width="40" />
-</a>
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=FROST8ytes&theme=gruvbox&hide_border=true" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FROST8ytes/FROST8ytes/output/snake.svg" alt="contribution snake" />
+</p>
+
+### `~/.contact`
+
+<p>
+  <a href="mailto:ammarfmr11@gmail.com"><img src="https://img.shields.io/badge/Gmail-282828?style=flat-square&logo=gmail&logoColor=fb4934" alt="Gmail" /></a>
+  <a href="https://discord.gg/zdfvYpK"><img src="https://img.shields.io/badge/Discord-frost8ytes-458588?style=flat-square&logo=discord&logoColor=ebdbb2&labelColor=282828" alt="Discord" /></a>
+  <a href="https://www.youtube.com/@FROST8ytes"><img src="https://img.shields.io/badge/YouTube-282828?style=flat-square&logo=youtube&logoColor=fb4934" alt="YouTube" /></a>
+  <a href="https://leetcode.com/frost8ytes"><img src="https://img.shields.io/badge/LeetCode-282828?style=flat-square&logo=leetcode&logoColor=fe8019" alt="LeetCode" /></a>
 </p>
