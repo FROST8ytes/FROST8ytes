@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="110" viewBox="0 0 720 110">
-  <rect width="720" height="110" rx="10" fill="#282828"/>
-  <text x="360" y="62" text-anchor="middle" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="44" font-weight="700" fill="#fabd2f">FROST<tspan fill="#fe8019">8</tspan>ytes<tspan fill="#ebdbb2">_</tspan></text>
-  <text x="360" y="90" text-anchor="middle" font-family="'JetBrains Mono',Consolas,Menlo,monospace" font-size="15" fill="#928374">blue team by day · red team &amp; SWE at heart</text>
-</svg>

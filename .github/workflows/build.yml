@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/**", "config/**", ".github/workflows/build.yml"]
+    paths: ["scripts/**", "config/**", "assets/**", ".github/workflows/build.yml"]
 
 permissions:
   contents: write
@@ -25,22 +25,32 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install github-readme-terminal
-          mkdir -p ~/.config/gifos && cp config/*.toml ~/.config/gifos/
+          mkdir -p ~/.config/gifos
 
-      - name: Generate terminal GIF
+      - name: Generate terminal GIFs (dark + light, transparent)
         env:
           GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
         run: |
           mkdir -p dist && cd dist
-          python ../scripts/gen_terminal.py
-          rm -rf frames
+          for theme in dark light; do
+            sed "s/^color_scheme = .*/color_scheme = \"gruvbox-$theme\"/" \
+              ../config/gifos_settings.toml > ~/.config/gifos/gifos_settings.toml
+            python ../scripts/gen_terminal.py "terminal-$theme"
+            rm -rf frames
+          done
+
+      - name: Generate streak cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
+        run: python scripts/gen_streak.py dist
 
       - name: Generate contribution snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg?color_snake=#fabd2f&color_dots=#3c3836,#504945,#79740e,#98971a,#b8bb26
+            dist/snake-dark.svg?color_snake=#fabd2f&color_dots=#3c3836,#504945,#79740e,#98971a,#b8bb26
+            dist/snake-light.svg?color_snake=#b57614&color_dots=#ebdbb2,#d5c4a1,#b8bb26,#98971a,#79740e
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

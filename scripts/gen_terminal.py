@@ -1,11 +1,16 @@
-"""Generate the Gruvbox Dark terminal GIF for the FROST8ytes profile README."""
+"""Generate the Gruvbox terminal GIF for the FROST8ytes profile README.
+
+Usage: python gen_terminal.py [output-name]   (default: terminal)
+The colour scheme comes from ~/.config/gifos/gifos_settings.toml; the
+background colour is keyed out afterwards so the GIF is transparent.""" 
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import gifos
-from PIL import Image
+from PIL import Image, ImageSequence
 
 USER = "FROST8ytes"
 FG_Y, FG_G, FG_B, FG_A, FG_R, FG_P, FG_O, GRAY, RST = (
@@ -19,13 +24,15 @@ ART = Path(__file__).resolve().parents[1] / "assets" / "snowflake3d.txt"
 LOGO_H = 220  # px, about 11 terminal rows
 
 
-def prep_logo(out="logo_tmp.png"):
+def prep_logo(bg_hex, out="logo_tmp.png"):
     """Flatten the transparent PNG onto the Gruvbox bg and scale it."""
     if not LOGO.exists():
         return None
     img = Image.open(LOGO).convert("RGBA")
     img = img.resize((round(img.width * LOGO_H / img.height), LOGO_H), Image.LANCZOS)
-    bg = Image.new("RGBA", img.size, "#282828")
+    a = img.getchannel("A").point(lambda v: 255 if v > 128 else 0)
+    img.putalpha(a)  # hard edges, so no halo once the bg is keyed out
+    bg = Image.new("RGBA", img.size, bg_hex)
     Image.alpha_composite(bg, img).convert("RGB").save(out)
     return out
 
@@ -33,6 +40,33 @@ def prep_logo(out="logo_tmp.png"):
 def t_logo_rows(h, row_px):
     import math
     return math.ceil(h / row_px)
+
+
+def make_transparent(src, dst):
+    """Key out the terminal background so the GIF sits on any page colour."""
+    im = Image.open(src)
+    frames, durs = [], []
+    bg = None
+    for f in ImageSequence.Iterator(im):
+        rgb = f.convert("RGB")
+        if bg is None:
+            bg = rgb.getpixel((0, 0))
+        p = rgb.quantize(colors=255, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+        pal = p.getpalette()[: 255 * 3]
+        px = p.load()
+        rp = rgb.load()
+        w, h = rgb.size
+        for y in range(h):
+            for x in range(w):
+                if rp[x, y] == bg:
+                    px[x, y] = 255
+        p.putpalette(pal + [0, 0, 0])
+        frames.append(p)
+        durs.append(f.info.get("duration", 66))
+    frames[0].save(
+        dst, save_all=True, append_images=frames[1:], duration=durs, loop=0,
+        transparency=255, disposal=2, optimize=False,
+    )
 
 
 def get_stats():
@@ -46,7 +80,9 @@ def get_stats():
 
 
 def main():
+    global BG
     t = gifos.Terminal(width=720, height=600, xpad=8, ypad=8)
+    BG = t._Terminal__bg_color  # theme background, keyed out later
     t.set_fps(15)
     now = datetime.now(ZoneInfo("Asia/Kuala_Lumpur"))
 
@@ -100,9 +136,9 @@ def main():
 
     # certs
     t.gen_prompt(6)
-    t.gen_typing_text("tree ~/certs", 6, contin=True, speed=2)
+    t.gen_typing_text("tree ~/.certs", 6, contin=True, speed=2)
     t.gen_text([
-        f"{FG_B}~/certs{RST}",
+        f"{FG_B}~/.certs{RST}",
         f"|-- {FG_Y}microsoft{RST}",
         f"|   |-- SC-200  Security Operations Analyst Associate",
         f"|   `-- SC-401  Information Security Administrator Associate",
@@ -129,7 +165,8 @@ def main():
         ("editor", "Zed, Neovim"),
         ("stack", "Defender XDR, Sentinel, KQL"),
         ("uni", "Universiti Teknologi PETRONAS"),
-        ("edu", "BCS (Hons) Data Analytics"),
+        ("degree", "Bachelor of Computer Science (Hons)"),
+        ("major", "Data Analytics"),
         ("minor", "Financial Management"),
         ("certs", "SC-200, SC-401, Sangfor x6"),
         ("langs", langs),
@@ -141,7 +178,7 @@ def main():
             ("prs", f"{s.total_pull_requests_made} ({s.pull_requests_merge_percentage}% merged)"),
             ("rank", s.user_rank.level),
         ]
-    logo = prep_logo()
+    logo = prep_logo(BG)
     col = 1
     if logo:
         t.paste_image(logo, 2, 1)
@@ -162,6 +199,10 @@ def main():
     t.gen_prompt(last + 2)
     t.clone_frame(45)
     t.gen_gif()
+    out = (sys.argv[1] if len(sys.argv) > 1 else "terminal") + ".gif"
+    make_transparent("terminal.gif", out)
+    if out != "terminal.gif":
+        os.remove("terminal.gif")
 
 
 if __name__ == "__main__":
